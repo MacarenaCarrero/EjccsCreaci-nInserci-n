@@ -10,14 +10,14 @@ const buttonElement = document.getElementById('button');
 const newName = document.createElement('h3');
 const newDiv = document.createElement('h3');
 
-const sayHello = event => {
+const sayHello = () => {
   const textContentInput = textElement.value;
 
-  newName.textContent = `Hello ${textContentInput}`;
+  if (textContentInput === '' || textContentInput.length < 3) {
+    return;
+  } else if ((newName.textContent = `Hello ${textContentInput}`));
   newDiv.prepend(newName);
-
   document.body.append(newDiv);
 };
-
 buttonElement.addEventListener('click', sayHello);
 textElement.addEventListener('submit', sayHello);
