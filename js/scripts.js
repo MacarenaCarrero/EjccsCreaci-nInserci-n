@@ -83,5 +83,23 @@ const failureTexts = [
   'No supplies today. The world remains unforgiving.',
   "She searched everywhere, but luck wasn't on her side."
 ];
+let days = 0;
 
-const findAbby = () => {};
+const getMessage = () => {
+  days++;
+  const list = document.createElement('li');
+  //una de supplies
+  const randomSupply = Math.floor(Math.random() * supplies.length);
+  const resultSupply = supplies[randomSupply];
+  //una de failures
+  const randomFailure = Math.floor(Math.random() * failureTexts.length);
+  const resultFailureContent = failureTexts[randomFailure];
+
+  if (Math.random() < 0.5) {
+    list.textContent = `Day ${days}- ${resultSupply}`;
+  } else {
+    list.textContent = `Day ${days}- ${resultFailureContent}`;
+  }
+  supplyHistoryElement.append(list);
+};
+findElement.addEventListener('click', getMessage);
