@@ -22,3 +22,11 @@ body {
   margin: 0;
   font-family: sans-serif;
 }
+
+.sayHello{
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+}
+.range{
+  margin-bottom: 2.5rem;
+}
