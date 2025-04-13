@@ -87,7 +87,7 @@ let days = 0;
 
 const getMessage = () => {
   days++;
-  const list = document.createElement('li');
+  const list = document.createElement('li'); //dentro para que no se borre el anterior
   //una de supplies
   const randomSupply = Math.floor(Math.random() * supplies.length);
   const resultSupply = supplies[randomSupply];
