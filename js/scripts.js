@@ -14,6 +14,7 @@ const sayHello = () => {
   const textContentInput = textElement.value;
 
   if (textContentInput === '' || textContentInput.length < 3) {
+    //no hace falta el vacio
     return;
   } else if ((newName.textContent = `Hello ${textContentInput}`));
   newDiv.prepend(newName);
